@@ -24,6 +24,9 @@ spec:
       - name: spring-petclinic
         imagePullPolicy: Always
         image: quay.io/siamaksade/spring-petclinic:latest
+        env:
+          - name: foo
+            value: bar
         livenessProbe:
           failureThreshold: 3
           httpGet:
